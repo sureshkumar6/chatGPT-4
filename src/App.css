@@ -1,5 +1,16 @@
-.App {
+.body{
+  height: 90vh;
+  width: 100%;
+}
+.App{
   text-align: center;
+}
+.main {
+  height: 90vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -12,6 +23,7 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 
 .App-header {
   background-color: #282c34;
@@ -35,4 +47,33 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.image-div{
+  display: flex;
+  flex-direction: row-reverse;
+  align-self: flex-end;
+  background-color: rgb(99, 214, 243);
+  border-radius: 10px
+}
+
+.robot-div{
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  background-color: rgb(67, 238, 44);
+  border-radius: 10px
+}
+
+.inputBox{
+  display: flex;
+  height: 80px;
+  justify-content: center;
+}
+
+.inputBox input {
+  flex-grow: 1;
+}
+.inputBox button {
+  margin-left: 2px;
 }
