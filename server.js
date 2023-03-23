@@ -1,7 +1,8 @@
 import express from "express";
 import {Configuration, OpenAIApi} from 'openai'
+import cors from 'cors'
 
-const OPENAI_API_KEY = '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' //API Key
+const OPENAI_API_KEY = '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' //API Key
 
 const configuration = new Configuration({
   apiKey: OPENAI_API_KEY,
@@ -11,6 +12,7 @@ const openai = new OpenAIApi(configuration);
 
 const app= express()
 app.use(express.json())
+app.use(cors())
 
 app.get('/', (req, resp)=>{
     resp.json({
@@ -46,6 +48,6 @@ app.post('/image', (req,resp)=>{
 })
 
 
-app.listen(6000, ()=>{
-    console.log('server is listening on PORT 6000')
+app.listen(6060, ()=>{
+    console.log('server is listening on PORT 6060')
 })
